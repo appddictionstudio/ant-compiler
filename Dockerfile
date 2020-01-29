@@ -1,7 +1,7 @@
 FROM alpine:20191219
 RUN apk update
 RUN apk fetch openjdk8
-RUN apk add --update --no-cache openssh sshpass openjdk8 bash curl apache-ant nano
+RUN apk add --update --no-cache openssh sshpass openjdk8 bash curl apache-ant nano git
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8-openjdk
 ENV PATH="$JAVA_HOME/bin:${PATH}"
 RUN java -version
