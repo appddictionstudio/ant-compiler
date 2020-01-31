@@ -9,3 +9,4 @@ ENV JAVA_HOME=/jdk1.6.0_24
 ENV PATH=$JAVA_HOME/bin:$PATH
 RUN java -version
 RUN yum install -y git
+RUN yum install -y sshpass
