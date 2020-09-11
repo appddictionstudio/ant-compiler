@@ -3,6 +3,7 @@ ARG NEXUS_USERNM
 ARG NEXUS_PASSWD
 RUN yum install -y ant sshpass git curl
 RUN curl -u $NEXUS_USERNM:$NEXUS_PASSWD -O https://nexus.di2e.net/nexus3/repository/Private_ACES_Raw/docker/installation/jdk-7u80-linux-x64.rpm
+RUN curl -u $NEXUS_USERNM:$NEXUS_PASSWD -O https://nexus.di2e.net/nexus3/repository/Private_ACES_Raw/docker/oracle/deployer/wlfullclient.jar
 RUN chmod +x jdk-7u80-linux-x64.rpm && rpm -ivh /jdk-7u80-linux-x64.rpm
 ENV SetJavaHome=/usr/java/jdk1.7.0_80/
 ENV JAVA_HOME=/usr/java/jdk1.7.0_80/
